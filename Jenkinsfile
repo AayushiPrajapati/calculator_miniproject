@@ -53,9 +53,9 @@ pipeline {
         stage('Push the Docker Image to Docker Hub') {
             steps {
                 script{
-                    docker.withRegistry('', 'docker_hub') {
-                    sh 'docker tag "${DOCKER_IMAGE_NAME}" mtrivedi1410/calculator:latest'
-                    sh 'docker push mtrivedi1410/calculator'
+                    docker.withRegistry('', 'dockerhub_cred') {
+                    sh 'docker tag "${DOCKER_IMAGE_NAME}" aayushi6402/calculator_miniproject:latest'
+                    sh 'docker push aayushi6402/calculator_miniproject:latest'
                     }
                  }
             }
