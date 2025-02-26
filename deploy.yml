@@ -15,7 +15,7 @@
       register: docker_pull_result
   
     # - name: Pull Docker Image
-    #   command: docker pull aayushi6402/calulator_miniproject:latest
+    #   command: docker pull aayushi6402/calculator_miniproject:latest
 
 
     - name: Stop and remove existing container if running
@@ -25,5 +25,5 @@
 
     - name: Run Java Application Container
       # shell: docker run -it -d --name calculator 
-      shell: docker run -it -d --name calculator_miniproject ayushi6402/calulator_miniproject /bin/bash
+      shell: docker run -it -d --name calculator_miniproject ayushi6402/calculator_miniproject /bin/bash
 
