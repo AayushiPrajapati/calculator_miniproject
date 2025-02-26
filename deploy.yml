@@ -1,7 +1,7 @@
 ---
 - name: Deploy Calculator App with Docker
   hosts: localhost
-  become: no
+  become: yes
   tasks:
     - name: Install Docker
       apt:
@@ -14,7 +14,7 @@
 
     - name: Stop and remove existing container if running
       shell: |
-        docker ps -a --format '{{ "{{" }} .Names {{ "}}" }}' | grep -w calculator && docker stop calculator && docker rm calculator || true
+        docker ps -a --format '{{ "{{" }} .Names {{ "}}" }}' | grep -w calculator_miniproject && docker stop calculator_miniproject && docker rm calculator_miniproject || true
       ignore_errors: yes
 
     - name: Run Java Application Container
