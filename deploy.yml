@@ -23,7 +23,10 @@
         docker ps -a --format '{{ "{{" }} .Names {{ "}}" }}' | grep -w calculator_miniproject && docker stop calculator_miniproject && docker rm calculator_miniproject || true
       ignore_errors: yes
 
+    # - name: Run Java Application Container
+    #   # shell: docker run -it -d --name calculator 
+    #   shell: docker run -it -d --name calculator_miniproject ayushi6402/calculator_miniproject /bin/bash
+
     - name: Run Java Application Container
-      # shell: docker run -it -d --name calculator 
-      shell: docker run -it -d --name calculator_miniproject ayushi6402/calculator_miniproject /bin/bash
+      command: docker run -it -d --name calculator_miniproject aayushi6402/calculator_miniproject
 
