@@ -9,7 +9,13 @@
         executable: pip3
 
     - name: Pull Docker Image
-      command: docker pull aayushi6402/calulator_miniproject:latest
+      docker_image:
+        name: "aayushi6402/calulator_miniproject:latest"
+        source: pull
+      register: docker_pull_result
+  
+    # - name: Pull Docker Image
+    #   command: docker pull aayushi6402/calulator_miniproject:latest
 
 
     - name: Stop and remove existing container if running
