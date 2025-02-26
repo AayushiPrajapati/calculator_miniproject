@@ -54,7 +54,7 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'dockerhub_cred') {
-                    sh 'docker tag "${DOCKER_IMAGE_NAME}" aayushi6402/calculator_miniproject:latest'
+                    sh "docker tag ${DOCKER_IMAGE_NAME} aayushi6402/calculator_miniproject:latest"
                     sh 'docker push aayushi6402/calculator_miniproject:latest'
                     }
                  }
