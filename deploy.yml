@@ -12,4 +12,4 @@
       command: docker pull aayushi6402/calulator_miniproject:latest
 
     - name: Run Docker Container
-      command: docker run -d --name calculator_miniproject aayushi6402/calulator_miniproject:latest
+      command: docker run -d --name calculator_miniproject aayushi6402/calulator_miniproject:latest /bin/bash
