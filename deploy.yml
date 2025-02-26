@@ -1,7 +1,7 @@
 ---
 - name: Deploy Calculator App with Docker
   hosts: localhost
-  become: no
+  become: false
   tasks:
     - name: Install Docker
       apt:
