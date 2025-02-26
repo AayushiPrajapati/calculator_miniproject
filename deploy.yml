@@ -28,5 +28,5 @@
     #   shell: docker run -it -d --name calculator_miniproject ayushi6402/calculator_miniproject /bin/bash
 
     - name: Run Java Application Container
-      command: docker run -it -d --name calculator_miniproject aayushi6402/calculator_miniproject
+      command: docker run -it -d --name calculator_miniproject aayushi6402/calculator_miniproject  /bin/bash
 
