@@ -10,7 +10,7 @@
 
     - name: Pull Docker Image
       docker_image:
-        name: "aayushi6402/calulator_miniproject:latest"
+        name: "aayushi6402/calculator_miniproject:latest"
         source: pull
       register: docker_pull_result
   
